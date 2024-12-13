@@ -124,6 +124,49 @@ function countNumber() {
   });
 }
 
+//Open dropdown
+function dropDown() {
+  document
+    .querySelectorAll(".Support-container-task-list-item-content__switch")
+    .forEach((arrow) => {
+      arrow.addEventListener("click", function () {
+        const listItem = this.closest(".Support-container-task-list-item");
+
+        const text = listItem.querySelector(
+          ".Support-container-task-list-item__txt"
+        );
+
+        const isCurrentlyOpen = text.style.display === "block";
+
+        document
+          .querySelectorAll(".Support-container-task-list-item")
+          .forEach((item) => {
+            const otherText = item.querySelector(
+              ".Support-container-task-list-item__txt"
+            );
+            const otherArrow = item.querySelector(
+              ".Support-container-task-list-item-content__switch"
+            );
+            if (otherText && otherArrow) {
+              otherText.style.display = "none";
+              otherArrow.src = "shared/img/support_ico_arrowdown01_pc_on.png";
+              otherArrow.alt = "support_ico_arrowdown01_pc_on.png";
+            }
+          });
+
+        if (isCurrentlyOpen) {
+          text.style.display = "none";
+          this.src = "shared/img/support_ico_arrowdown01_pc_on.png";
+          this.alt = "support_ico_arrowdown01_pc_on.png";
+        } else {
+          text.style.display = "block";
+          this.src = "shared/img/support_ico_arrowup01_pc_on.png";
+          this.alt = "support_ico_arrowup01_pc_on.png";
+        }
+      });
+    });
+}
+dropDown();
 openHeaderMenu();
 slickSlider();
 countNumber();
