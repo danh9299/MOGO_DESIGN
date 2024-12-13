@@ -816,3 +816,126 @@ ul {
     max-height: 600px;
   }
 }
+
+/*Support*/
+
+.Support {
+  padding: 50px 0;
+  width: 100%;
+}
+
+.Support-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.Support-container-intro {
+  text-align: center;
+}
+
+.Support-container-intro__txt {
+  font-family: "Kaushan Script";
+  text-transform: capitalize;
+  font-size: 24px;
+  font-weight: 100;
+  padding: 10px;
+}
+
+.Support-container-intro__ttl {
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 10px;
+  position: relative;
+}
+
+.Support-container-intro__ttl::after {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: -20px;
+  transform: translateX(-50%);
+  content: "";
+  width: 5%;
+  height: 4px;
+  background-color: #f38181;
+  text-align: center;
+}
+
+.Support-container-intro__description {
+  padding: 40px 0;
+  font-size: 15px;
+  color: #b6b6b6;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Support-container-task {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Support-container-task-image {
+  width: 50%;
+}
+
+.Support-container-task-image > img {
+  max-height: 380px;
+  max-width: 95%;
+}
+
+.Support-container-task-list {
+  width: 50%;
+  height: 100%;
+}
+
+.Support-container-task-list-item {
+  width: 100%;
+  padding: 5px 0;
+  max-height: 50%;
+}
+
+.Support-container-task-list-item-content-ico {
+  padding: 10px;
+}
+
+.Support-container-task-list-item-content {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #b6b6b6;
+  border-bottom: 1px solid #b6b6b6;
+  position: relative;
+}
+
+.Support-container-task-list-item-content__ttl {
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.Support-container-task-list-item__txt {
+  max-height: calc(50% - 40px);
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  color: #b6b6b6;
+  font-style: italic;
+  display: none;
+  overflow-y: scroll;
+}
+
+.Support-container-task-list-item-content__switch {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1280px) {
+  .Support-container-task-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  .Support-container-task-list {
+    width: 100%;
+  }
+}
