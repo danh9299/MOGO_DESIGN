@@ -1,3 +1,4 @@
+// openHeaderMenu
 function openHeaderMenu() {
   document.addEventListener("DOMContentLoaded", () => {
     const headerContainer = document.querySelector(".Header-container-top");
@@ -29,6 +30,7 @@ function openHeaderMenu() {
   });
 }
 
+// slick Slider
 function slickSlider() {
   $(document).ready(function () {
     $(".Header-container-slider").slick({
@@ -77,5 +79,51 @@ function slickSlider() {
   }
 }
 
+// countNumber
+function countNumber() {
+  document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".Number-container-info__num");
+    const speed = 100;
+
+    const countEffect = (counter) => {
+      const target = parseInt(counter.getAttribute("data-target"), 10);
+      counter.innerText = "0";
+
+      const updateCount = () => {
+        const count = parseInt(counter.innerText, 10);
+        const increment = Math.ceil(target / speed);
+
+        if (count < target) {
+          counter.innerText = count + increment;
+          setTimeout(updateCount, 10);
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      updateCount();
+    };
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            countEffect(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+
+    counters.forEach((counter) => {
+      observer.observe(counter);
+    });
+  });
+}
+
 openHeaderMenu();
 slickSlider();
+countNumber();
