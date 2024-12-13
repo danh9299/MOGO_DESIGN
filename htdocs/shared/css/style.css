@@ -732,3 +732,87 @@ ul {
     width: 100%;
   }
 }
+
+/*Feature*/
+.Feature {
+  width: 100%;
+  padding: 60px 0;
+}
+
+.Feature-container {
+  background-image: url("../img/feature_img_background01_pc_on.png");
+  height: 850px;
+  position: relative;
+  z-index: 1;
+}
+
+.Feature-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e9e9e9;
+  z-index: 2;
+  opacity: 0.8;
+}
+
+.Feature-container-intro {
+  position: relative;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  text-align: center;
+}
+
+.Feature-container-intro::after {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: -15px;
+  transform: translateX(-50%);
+  content: "";
+  width: 5%;
+  height: 4px;
+  background-color: #f38181;
+  text-align: center;
+}
+
+.Feature-container-intro__txt {
+  font-family: "Kaushan Script";
+  font-size: 24px;
+  font-weight: 100;
+  padding: 10px;
+}
+
+.Feature-container-intro__ttl {
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.Feature-container-image__tablet {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  max-width: 80%;
+}
+
+.Feature-container-image__phone {
+  position: absolute;
+  bottom: -100px;
+  left: 70%;
+  transform: translateX(-50%);
+  z-index: 3;
+  padding: 40px 0;
+  max-width: 20%;
+}
+
+@media screen and (max-width: 480px) {
+  .Feature-container {
+    max-height: 600px;
+  }
+}
