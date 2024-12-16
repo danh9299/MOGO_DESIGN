@@ -30,8 +30,8 @@ function openHeaderMenu() {
   });
 }
 
-// slick Slider
-function slickSlider() {
+// slick Slider Header
+function slickSliderHeader() {
   $(document).ready(function () {
     $(".Header-container-slider").slick({
       dots: false,
@@ -77,6 +77,26 @@ function slickSlider() {
       width: segmentWidth + "px",
     });
   }
+}
+
+//Slick Slider Quote
+function slickSliderQuote() {
+  $(document).ready(function () {
+    $(".Quote-container-slider").slick({
+      dots: false,
+      prevArrow:
+        '<div class="slick-prev Quote-container-slider-slick-prev"> <img src="shared/img/quote_ico_arrowleft01_pc_on.png"> </div>',
+      nextArrow:
+        '<div class="slick-next Quote-container-slider-slick-next">  <img src="shared/img/quote_ico_arrowright01_pc_on.png"> </div>',
+      arrows: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: false,
+      autoplaySpeed: 3000,
+    });
+  });
 }
 
 // countNumber
@@ -168,5 +188,6 @@ function dropDown() {
 }
 dropDown();
 openHeaderMenu();
-slickSlider();
+slickSliderHeader();
 countNumber();
+slickSliderQuote();
