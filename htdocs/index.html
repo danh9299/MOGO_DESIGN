@@ -814,9 +814,9 @@
               </div>
             </div>
 
-            <h2 class="Blog-container-list-article__ttl">
+            <a class="Blog-container-list-article__ttl">
               Lorem ipsum dolor sit amet
-            </h2>
+            </a>
             <p class="Blog-container-list-article__txt">
               Consectetur adipsicing elit, sed do eiusmod tempor incididunt ut
               labore et dolore magna aliqua
@@ -851,9 +851,9 @@
                 </p>
               </div>
             </div>
-            <h2 class="Blog-container-list-article__ttl">
+            <a class="Blog-container-list-article__ttl">
               sed do eiusmod tempor
-            </h2>
+            </a>
             <p class="Blog-container-list-article__txt">
               Adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua.
@@ -863,14 +863,14 @@
                 <div class="Blog-container-list-article-stat-view-ico">
                   <img src="shared/img/blog_ico_view01_pc_on.png" alt="blog_ico_view01_pc_on.png" />
                 </div>
-                <p class="Blog-container-list-article-stat-view__num">542</p>
+                <p class="Blog-container-list-article-stat-view__num">992</p>
               </div>
               <div class="Blog-container-list-article-stat-comment">
                 <div class="Blog-container-list-article-stat-comment-ico">
                   <img src="shared/img/blog_ico_comment01_pc_on.png" alt="blog_ico_comment01_pc_on.png" />
                 </div>
                 <p class="Blog-container-list-article-stat-comment__num">
-                  17
+                  42
                 </p>
               </div>
             </div>
@@ -888,9 +888,9 @@
                 </p>
               </div>
             </div>
-            <h2 class="Blog-container-list-article__ttl">
+            <a class="Blog-container-list-article__ttl">
               Lorem ipsum dolor sit amet
-            </h2>
+            </a>
             <p class="Blog-container-list-article__txt">
               Consectetur adipsicing elit, sed do eiusmod tempor incididunt ut
               labore et dolore magna aliqua
@@ -900,14 +900,14 @@
                 <div class="Blog-container-list-article-stat-view-ico">
                   <img src="shared/img/blog_ico_view01_pc_on.png" alt="blog_ico_view01_pc_on.png" />
                 </div>
-                <p class="Blog-container-list-article-stat-view__num">542</p>
+                <p class="Blog-container-list-article-stat-view__num">1560</p>
               </div>
               <div class="Blog-container-list-article-stat-comment">
                 <div class="Blog-container-list-article-stat-comment-ico">
                   <img src="shared/img/blog_ico_comment01_pc_on.png" alt="blog_ico_comment01_pc_on.png" />
                 </div>
                 <p class="Blog-container-list-article-stat-comment__num">
-                  17
+                  98
                 </p>
               </div>
             </div>
@@ -921,7 +921,7 @@
   <section class="Map">
     <div class="Responsive">
       <div class="Map-container">
-        <div class="Map-container-btn">
+        <div class="Map-container-btn" id="mapToggleBtn">
           <div class="Map-container-btn-ico">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px"
               height="26px">
@@ -930,6 +930,18 @@
             </svg>
           </div>
           <h2 class="Map-container-btn__ttl">Open map</h2>
+        </div>
+
+        <div class="Map-container__overlay" id="mapOverlay"></div>
+
+        <div class="Map-container-content" id="mapContent">
+          <iframe
+            src="https://maps.google.com/maps?q=Hanoi&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="300px"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
     </div>
@@ -1069,8 +1081,8 @@
       </div>
       <div class="Footer-copyright">
         <p class="Footer-copyright-txt">
-        © 2016 MoGo free PSD template by <a class="Footer-copyright-txt__designer" href="#">Laaqiq</a>
-       </p>
+          © 2016 MoGo free PSD template by <a class="Footer-copyright-txt__designer" href="#">Laaqiq</a>
+        </p>
       </div>
     </div>
   </footer>
