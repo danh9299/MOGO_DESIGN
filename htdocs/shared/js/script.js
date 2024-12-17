@@ -99,6 +99,25 @@ function slickSliderQuote() {
   });
 }
 
+//show Map
+function showMap() {
+  const mapToggleBtn = document.getElementById("mapToggleBtn");
+  const mapContent = document.getElementById("mapContent");
+  const mapOverlay = document.getElementById("mapOverlay");
+
+  mapToggleBtn.addEventListener("click", function () {
+    mapContent.classList.add("js-showMap");
+    mapOverlay.classList.add("js-showOverlay");
+    document.body.style.overflow = "hidden";
+  });
+
+  mapOverlay.addEventListener("click", function () {
+    mapContent.classList.remove("js-showMap");
+    mapOverlay.classList.remove("js-showOverlay");
+    document.body.style.overflow = "";
+  });
+}
+
 // countNumber
 function countNumber() {
   document.addEventListener("DOMContentLoaded", () => {
@@ -188,31 +207,32 @@ function dropDown() {
 }
 
 //Show more
-function showMoreIgPhotos(){
-  document.addEventListener('DOMContentLoaded', function () {
-    const showMoreBtn = document.getElementById('showMoreBtn');
-    const hiddenImages = document.querySelectorAll('.Footer-container-ig-list__img--hidden-image');
+function showMoreIgPhotos() {
+  document.addEventListener("DOMContentLoaded", function () {
+    const showMoreBtn = document.getElementById("showMoreBtn");
+    const hiddenImages = document.querySelectorAll(
+      ".Footer-container-ig-list__img--hidden-image"
+    );
     let isExpanded = false;
-  
-    showMoreBtn.addEventListener('click', function () {
+
+    showMoreBtn.addEventListener("click", function () {
       if (!isExpanded) {
-        hiddenImages.forEach(img => img.style.display = 'block');
-        showMoreBtn.textContent = 'View less photos'; 
+        hiddenImages.forEach((img) => (img.style.display = "block"));
+        showMoreBtn.textContent = "View less photos";
         isExpanded = true;
       } else {
-        hiddenImages.forEach(img => img.style.display = 'none');
-        showMoreBtn.textContent = 'View more photos'; 
+        hiddenImages.forEach((img) => (img.style.display = "none"));
+        showMoreBtn.textContent = "View more photos";
         isExpanded = false;
       }
     });
   });
-  
 }
-
 
 dropDown();
 openHeaderMenu();
 slickSliderHeader();
 countNumber();
 slickSliderQuote();
-showMoreIgPhotos()
+showMoreIgPhotos();
+showMap();
