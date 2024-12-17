@@ -186,8 +186,33 @@ function dropDown() {
       });
     });
 }
+
+//Show more
+function showMoreIgPhotos(){
+  document.addEventListener('DOMContentLoaded', function () {
+    const showMoreBtn = document.getElementById('showMoreBtn');
+    const hiddenImages = document.querySelectorAll('.Footer-container-ig-list__img--hidden-image');
+    let isExpanded = false;
+  
+    showMoreBtn.addEventListener('click', function () {
+      if (!isExpanded) {
+        hiddenImages.forEach(img => img.style.display = 'block');
+        showMoreBtn.textContent = 'View less photos'; 
+        isExpanded = true;
+      } else {
+        hiddenImages.forEach(img => img.style.display = 'none');
+        showMoreBtn.textContent = 'View more photos'; 
+        isExpanded = false;
+      }
+    });
+  });
+  
+}
+
+
 dropDown();
 openHeaderMenu();
 slickSliderHeader();
 countNumber();
 slickSliderQuote();
+showMoreIgPhotos()
