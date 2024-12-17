@@ -799,26 +799,27 @@ ul {
 
 .Feature-container-img__tablet {
   position: absolute;
-  bottom: 0;
+  bottom: -29px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
   max-width: 80%;
+  overflow: hidden;
 }
 
-.Feature-container-img__phone {
-  position: absolute;
-  bottom: -100px;
-  left: 70%;
-  transform: translateX(-50%);
-  z-index: 3;
-  padding: 40px 0;
-  max-width: 20%;
+@media screen and (max-width: 600px){
+ 
+  .Feature-container-img__tablet {
+    bottom: -1.3rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .Feature-container {
     max-height: 600px;
+  }
+  .Feature-container-img__tablet {
+    bottom: -1rem;
   }
 }
 
