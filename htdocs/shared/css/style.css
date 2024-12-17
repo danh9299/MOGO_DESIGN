@@ -36,7 +36,6 @@ ul {
   width: 100%;
   z-index: 1;
   top: 0;
-  
 }
 
 .Header-container {
@@ -67,13 +66,11 @@ ul {
   width: 80%;
   margin: 0 auto;
   justify-content: space-between;
-  
 }
 
 .Header-container-top-logo {
   z-index: 2;
   padding: 20px 40px;
-  
 }
 
 .Header-container-top-logo__link {
@@ -93,7 +90,6 @@ ul {
   display: flex;
   padding: 30px 0px;
   height: 30px;
- 
 }
 
 .Header-container-top-nav__link {
@@ -1075,11 +1071,11 @@ ul {
     font-size: 18px;
   }
   .Quote-container-slider-slick-prev {
-    display:none;
+    display: none;
   }
-  
+
   .Quote-container-slider-slick-next {
-    display:none;
+    display: none;
   }
 }
 
