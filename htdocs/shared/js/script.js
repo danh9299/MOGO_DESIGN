@@ -165,36 +165,33 @@ function dropDown() {
       arrow.addEventListener("click", function () {
         const listItem = this.closest(".Support-container-task-list-item");
 
-        const text = listItem.querySelector(
+        const textContainer = listItem.querySelector(
           ".Support-container-task-list-item-description"
         );
 
-        const isCurrentlyOpen = text.style.display === "block";
+        const isCurrentlyOpen =
+          textContainer.style.maxHeight &&
+          textContainer.style.maxHeight !== "0px";
 
         document
-          .querySelectorAll(".Support-container-task-list-item")
-          .forEach((item) => {
-            const otherText = item.querySelector(
-              ".Support-container-task-list-item-description"
-            );
-            const otherArrow = item.querySelector(
-              ".Support-container-task-list-item-content__switch"
-            );
-            if (otherText && otherArrow) {
-              otherText.style.display = "none";
-              otherArrow.src = "shared/img/support_ico_arrowdown01_pc_on.png";
-              otherArrow.alt = "support_ico_arrowdown01_pc_on.png";
-            }
+          .querySelectorAll(".Support-container-task-list-item-description")
+          .forEach((otherTextContainer) => {
+            otherTextContainer.style.maxHeight = "0";
+            otherTextContainer.style.paddingTop = "0";
+            otherTextContainer.style.paddingBottom = "0";
+            otherTextContainer.style.borderBottom = "none";
           });
 
         if (isCurrentlyOpen) {
-          text.style.display = "none";
-          this.src = "shared/img/support_ico_arrowdown01_pc_on.png";
-          this.alt = "support_ico_arrowdown01_pc_on.png";
+          textContainer.style.maxHeight = "0";
+          textContainer.style.paddingTop = "0";
+          textContainer.style.paddingBottom = "0";
+          textContainer.style.borderBottom = "none";
         } else {
-          text.style.display = "block";
-          this.src = "shared/img/support_ico_arrowup01_pc_on.png";
-          this.alt = "support_ico_arrowup01_pc_on.png";
+          textContainer.style.maxHeight = `${textContainer.scrollHeight}px`;
+          textContainer.style.paddingTop = "10px";
+          textContainer.style.paddingBottom = "10px";
+          textContainer.style.borderBottom = " 1px solid #b6b6b6";
         }
       });
     });
