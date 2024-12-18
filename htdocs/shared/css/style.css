@@ -908,6 +908,11 @@ ul {
 .Support-container-task-img > img {
   max-height: 380px;
   max-width: 95%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Support-container-task-img:hover img {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .Support-container-task-list {
