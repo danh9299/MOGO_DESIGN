@@ -169,6 +169,10 @@ function dropDown() {
           ".Support-container-task-list-item-description"
         );
 
+        const arrowIcon = this.querySelector(
+          ".Support-container-task-list-item-content__switch"
+        );
+
         const isCurrentlyOpen =
           textContainer.style.maxHeight &&
           textContainer.style.maxHeight !== "0px";
@@ -176,10 +180,21 @@ function dropDown() {
         document
           .querySelectorAll(".Support-container-task-list-item-description")
           .forEach((otherTextContainer) => {
+            const otherArrow = otherTextContainer
+              .closest(".Support-container-task-list-item")
+              .querySelector(
+                ".Support-container-task-list-item-content__switch"
+              );
+
             otherTextContainer.style.maxHeight = "0";
             otherTextContainer.style.paddingTop = "0";
             otherTextContainer.style.paddingBottom = "0";
             otherTextContainer.style.borderBottom = "none";
+
+            if (otherArrow) {
+              otherArrow.src = "shared/img/support_ico_arrowdown01_pc_on.png";
+              otherArrow.alt = "support_ico_arrowdown01_pc_on.png";
+            }
           });
 
         if (isCurrentlyOpen) {
@@ -187,11 +202,15 @@ function dropDown() {
           textContainer.style.paddingTop = "0";
           textContainer.style.paddingBottom = "0";
           textContainer.style.borderBottom = "none";
+          arrowIcon.src = "shared/img/support_ico_arrowdown01_pc_on.png";
+          arrowIcon.alt = "support_ico_arrowdown01_pc_on.png";
         } else {
           textContainer.style.maxHeight = `${textContainer.scrollHeight}px`;
           textContainer.style.paddingTop = "10px";
           textContainer.style.paddingBottom = "10px";
           textContainer.style.borderBottom = " 1px solid #b6b6b6";
+          arrowIcon.src = "shared/img/support_ico_arrowup01_pc_on.png";
+          arrowIcon.alt = "support_ico_arrowup01_pc_on.png";
         }
       });
     });
