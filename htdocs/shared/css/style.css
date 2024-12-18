@@ -1038,6 +1038,7 @@ ul {
   align-items: center;
   margin: auto;
   display: flex;
+  padding: 0 88px;
 }
 
 .Quote-container-slider-item-content-ico {
@@ -1096,12 +1097,10 @@ ul {
 }
 
 .Quote-container-slider-slick-prev {
-  left: -60px;
   top: 40%;
 }
 
 .Quote-container-slider-slick-next {
-  right: -60px;
   top: 40%;
 }
 
@@ -1109,19 +1108,44 @@ ul {
   .Quote-container-slider-item-msg__txt {
     font-size: 18px;
   }
+
   .Quote-container-slider-item-msg__author {
     font-size: 18px;
-  }
-  .Quote-container-slider-slick-prev > img {
-    display: none;
-  }
-
-  .Quote-container-slider-slick-next > img {
-    display: none;
   }
 }
 
 @media screen and (max-width: 960px) {
+  .Quote-container-slider-item-content {
+    padding: 0px 10px;
+    display: block;
+  }
+
+  .Quote-container-slider-item-msg__txt {
+    text-align: center;
+  }
+  .Quote-container-slider-item-msg__author {
+    text-align: center;
+    padding: 0;
+  }
+  .Quote-container-slider-item-msg__author::before {
+    height: 0;
+  }
+  .Quote-container-slider-item-content-ico {
+    margin: 0 auto 10px;
+  }
+
+  .Quote-container-slider-item-content-avatar {
+    margin: 0 auto 10px;
+    max-width: 200px;
+    max-height: 200px;
+  }
+  .Quote-container-slider-slick-prev {
+    left: 0;
+  }
+
+  .Quote-container-slider-slick-next {
+    right: 0;
+  }
   .Quote-container-slider {
     width: 90%;
   }
@@ -1146,7 +1170,7 @@ ul {
     max-height: 50px;
   }
   .Quote-container-slider {
-    width: 95%;
+    width: 90%;
   }
   .Quote-container-slider {
     font-size: 12px;
@@ -1160,8 +1184,8 @@ ul {
     padding: 15px;
   }
   .Quote-container-slider-item-content-avatar {
-    max-height: 20px;
-    max-width: 20px;
+    max-height: 50px;
+    max-width: 50px;
     padding: 15px;
   }
   .Quote-container-slider-item-content-ico > img {
@@ -1506,6 +1530,13 @@ ul {
 .Work-container-showcase-col-img:hover
   > .Work-container-showcase-col-img-hover {
   display: flex;
+}
+
+@media screen and (max-width: 1280px) {
+  .Work-container-intro {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 600px) {
