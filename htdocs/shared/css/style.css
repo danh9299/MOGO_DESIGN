@@ -2356,3 +2356,9 @@ ul {
     padding: 0;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .Footer-container-info-subscribe__btn {
+    padding: 0;
+  }
+}
