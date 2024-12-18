@@ -30,7 +30,6 @@ function openHeaderMenu() {
   });
 }
 
-// slick Slider Header
 function slickSliderHeader() {
   $(document).ready(function () {
     $(".Header-container-slider").slick({
@@ -52,7 +51,7 @@ function slickSliderHeader() {
       }
     );
 
-    $(".Header-container-category-list li").on("click", function () {
+    $(".Header-container-category-list-item").on("click", function () {
       var index = $(this).data("slide");
       $(".Header-container-slider").slick("slickGoTo", index);
     });
@@ -61,21 +60,16 @@ function slickSliderHeader() {
   });
 
   function updateProgressFill(currentSlide) {
-    const progressWidth = $(
-      ".Header-container-category-list-item-progress"
-    ).width();
-    const totalSlides = $(".Header-container-category-list-item").length;
-
-    const segmentWidth = progressWidth / totalSlides;
-    const leftPosition = currentSlide * segmentWidth;
-
-    const progressFill = $(
+    const categoryItems = $(".Header-container-category-list-item");
+    const progressItems = $(
       ".Header-container-category-list-item-progress__fill"
     );
-    progressFill.css({
-      left: leftPosition + "px",
-      width: segmentWidth + "px",
-    });
+
+    categoryItems.removeClass("js-activeSlide");
+    progressItems.css("width", "0");
+
+    categoryItems.eq(currentSlide).addClass("js-activeSlide");
+    progressItems.eq(currentSlide).css("width", "25%");
   }
 }
 
@@ -166,13 +160,13 @@ function countNumber() {
 //Open dropdown
 function dropDown() {
   document
-    .querySelectorAll(".Support-container-task-list-item-content__switch")
+    .querySelectorAll(".Support-container-task-list-item-content")
     .forEach((arrow) => {
       arrow.addEventListener("click", function () {
         const listItem = this.closest(".Support-container-task-list-item");
 
         const text = listItem.querySelector(
-          ".Support-container-task-list-item__txt"
+          ".Support-container-task-list-item-description"
         );
 
         const isCurrentlyOpen = text.style.display === "block";
@@ -181,7 +175,7 @@ function dropDown() {
           .querySelectorAll(".Support-container-task-list-item")
           .forEach((item) => {
             const otherText = item.querySelector(
-              ".Support-container-task-list-item__txt"
+              ".Support-container-task-list-item-description"
             );
             const otherArrow = item.querySelector(
               ".Support-container-task-list-item-content__switch"
