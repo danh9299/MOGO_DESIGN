@@ -557,6 +557,15 @@ ul {
   .About-container-showcase-img {
     width: 50%;
   }
+  .About-container-showcase-img:hover > .About-container-showcase-img-overlay {
+    opacity: 0;
+  }
+  .About-container-showcase-img:hover::after {
+    opacity: 0;
+  }
+  .About-container-showcase-img:hover > img {
+    transform: translate(0, 0);
+  }
   .About-container-intro__ttl {
     font-size: 16px;
     padding: 10px 0;
