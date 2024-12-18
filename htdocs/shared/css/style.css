@@ -941,9 +941,12 @@ ul {
 
 .Support-container-task-list-item-description {
   border: 1px solid #b6b6b6;
-  padding: 10px 20px;
-  display: none;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
   border-top: none;
+  border-bottom: none;
+  transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
 .Support-container-task-list-item-description__txt {
