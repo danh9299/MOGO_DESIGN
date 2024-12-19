@@ -33,7 +33,7 @@ ul {
 
 .Common-intro {
   width: 100%;
-  margin: 0 auto;
+  margin: 110px auto;
   text-align: center;
 }
 
@@ -57,22 +57,22 @@ ul {
   height: 4px;
   background-color: #f38181;
   bottom: 0;
-  margin-top: 20px;
+  top: 120px;
   left: 50%;
   transform: translateX(-50%);
-  width: 10%;
+  width: 63px;
 }
 
 .Common-intro__description {
   margin-top: 20px;
   font-size: 15px;
-  padding: 10px 0;
+  padding: 70px 0 0;
   color: #b6b6b6;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .Common-intro--toplayer {
-  padding: 20px 0;
+  top: 110px;
   position: absolute;
   z-index: 2;
   margin: 0;
@@ -83,7 +83,24 @@ ul {
 @media screen and (max-width: 1280px) {
   .Common-intro {
     width: 80%;
-    margin: 0 auto;
+  }
+  .Common-intro--toplayer {
+    top: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .Common-intro {
+    margin: 50px auto;
+  }
+  .Common-intro__txt {
+    font-size: 15px;
+  }
+
+  .Common-intro__ttl {
+    font-size: 18px;
+  }
+  .Common-intro__ttl::after {
+    top: 80px;
   }
 }
 
@@ -123,7 +140,7 @@ ul {
 .Header-container-top {
   display: flex;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 170px;
   justify-content: space-between;
 }
 
@@ -282,6 +299,7 @@ ul {
   font-size: 72px;
   font-family: "Kaushan Script";
   text-transform: capitalize;
+  margin-bottom: 65px;
 }
 
 .Header-container-slider-content__ttl--bold {
@@ -293,7 +311,7 @@ ul {
 .Header-container-learn-more {
   position: absolute;
   z-index: 2;
-  top: 75%;
+  top: 750px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -311,7 +329,7 @@ ul {
   width: 40%;
   height: 2px;
   background-color: #fff;
-  top: -50px;
+  top: -55px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -320,7 +338,7 @@ ul {
   position: absolute;
   z-index: 2;
   width: 80%;
-  bottom: 0;
+  top: 910px;
   left: 50%;
   transform: translateX(-50%);
   padding: 20px 0;
@@ -480,11 +498,15 @@ ul {
   .Header-container-category-list-item {
     font-size: 10px;
   }
+  .Header-container-learn-more__btn {
+    font-size: 12px;
+    padding: 5px 30px;
+  }
 }
 
 /*About*/
 .About {
-  margin: 70px auto;
+  margin: 0 auto;
   width: 100%;
 }
 
@@ -675,7 +697,6 @@ ul {
 /*Service*/
 .Service {
   width: 100%;
-  padding: 60px 0;
 }
 
 .Service-container {
@@ -748,10 +769,11 @@ ul {
   background-size: cover;
   position: relative;
   z-index: 1;
+  margin-top: 118px;
 }
 
 .Feature-container {
-  height: 850px;
+  height: 860px;
   position: relative;
 }
 
@@ -768,39 +790,44 @@ ul {
 
 .Feature-container-img__tablet {
   position: absolute;
-  bottom: -29px;
+  bottom: -25px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
-  max-width: 100%;
+  max-width: 600px;
+  max-height: 550px;
   overflow: hidden;
 }
 
 @media screen and (max-width: 960px) {
   .Feature-container-img__tablet {
-    width: 60%;
+    bottom: -25px;
   }
 }
 
 @media screen and (max-width: 600px) {
+  .Feature-container {
+    max-height: 600px;
+  }
   .Feature-container-img__tablet {
-    bottom: -1.3rem;
+    width: 60%;
+    bottom: -15px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .Feature-container {
-    max-height: 600px;
+    max-height: 500px;
   }
   .Feature-container-img__tablet {
-    bottom: -1rem;
+    bottom: -10px;
   }
 }
 
 /*Support*/
 
 .Support {
-  padding: 50px 0;
+  padding: 20px 0 110px;
   width: 100%;
 }
 
@@ -984,7 +1011,7 @@ ul {
   font-size: 24px;
   margin-top: 10px;
   position: relative;
-  padding-left: 8%;
+  padding-left: 80px;
   text-transform: capitalize;
 }
 
@@ -994,7 +1021,7 @@ ul {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 7%;
+  width: 60px;
   height: 2px;
   background-color: #f38181;
   border-radius: 2px;
@@ -1042,6 +1069,8 @@ ul {
     margin: 0 auto 10px;
     max-width: 200px;
     max-height: 200px;
+    display: flex;
+    justify-content: center;
   }
   .Quote-container-slider-slick-prev {
     left: 0;
@@ -1100,7 +1129,7 @@ ul {
 
 /*Team*/
 .Team {
-  margin: 70px auto;
+  margin: 0px auto;
   width: 100%;
 }
 
@@ -1156,14 +1185,14 @@ ul {
   font-size: 14px;
   font-weight: bold;
   color: #333;
-  padding-top: 10px;
+  padding-top: 30px;
 }
 
 .Team-container-showcase-img__role {
   text-align: center;
   text-transform: capitalize;
   font-size: 15px;
-  padding-top: 10px;
+  padding-top: 16px;
   font-style: italic;
   color: #ccc;
   font-family: "Roboto";
@@ -1235,7 +1264,7 @@ ul {
 .Brand {
   width: 100%;
   background-color: #f8f8f8;
-  padding: 50px 0;
+  margin-top: 195px;
 }
 .Brand-container {
   width: 100%;
@@ -1249,6 +1278,9 @@ ul {
 }
 
 @media screen and (max-width: 600px) {
+  .Brand {
+    margin-top: -20px;
+  }
   .Brand-container {
     width: 80%;
   }
@@ -1256,11 +1288,12 @@ ul {
 
 /*Work*/
 .Work {
-  margin: 70px auto;
+  margin: 113px auto 0;
   width: 100%;
 }
 
 .Work-container-showcase {
+  margin-top: 105px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0;
@@ -1381,6 +1414,7 @@ ul {
 
 /*Feedback*/
 .Feedback {
+  margin-top: 120px;
   width: 100%;
   overflow-y: auto;
   position: relative;
@@ -1516,7 +1550,7 @@ ul {
 
 /*Blog*/
 .Blog {
-  margin: 70px auto;
+  margin: 100px auto;
   width: 100%;
 }
 
@@ -1529,7 +1563,7 @@ ul {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .Blog-container-list-article {
@@ -1723,6 +1757,7 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  margin-top: 100px;
 }
 
 .Map-container {
@@ -1751,6 +1786,7 @@ ul {
   z-index: 2;
   position: absolute;
   cursor: pointer;
+  bottom: 84px;
 }
 
 .Map-container-btn__ttl {
@@ -1758,6 +1794,7 @@ ul {
   position: relative;
   text-transform: uppercase;
   font-size: 24px;
+  padding-top: 15px;
 }
 
 .Map-container-btn__ttl::after {
@@ -1765,8 +1802,8 @@ ul {
   background-color: #f38181;
   content: "";
   height: 3px;
-  width: 30%;
-  bottom: -20px;
+  width: 63px;
+  bottom: -25px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -1825,6 +1862,7 @@ ul {
 /*Footer*/
 .Footer {
   width: 100%;
+  margin-top: 70px;
 }
 
 .Footer-container {
