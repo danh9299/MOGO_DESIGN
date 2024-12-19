@@ -954,11 +954,11 @@ ul {
 .Quote {
   margin-top: 125px;
   padding: 70px 0;
-  background-color:#f8f8f8;
+  background-color: #f8f8f8;
 }
 
 .Quote--whitebg {
-  background-color:#fff;
+  background-color: #fff;
 }
 
 .Quote-container {
@@ -1152,6 +1152,8 @@ ul {
   position: relative;
   background-color: #95e1d3;
   cursor: pointer;
+  max-width: 375px;
+  max-height: 470px;
 }
 
 .Team-container-showcase-img > img {
@@ -1255,7 +1257,9 @@ ul {
 @media screen and (max-width: 960px) {
   .Team-container-showcase-img {
     width: 45%;
-    margin-bottom: 15%;
+    max-width: 80%;
+    max-height: 80%;
+    margin: 100px auto;
   }
 }
 
