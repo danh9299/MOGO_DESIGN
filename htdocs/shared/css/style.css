@@ -1733,6 +1733,7 @@ ul {
   .Blog-container-list {
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 20px;
   }
 
   .Blog-container-list-article {
