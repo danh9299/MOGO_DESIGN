@@ -952,7 +952,13 @@ ul {
 
 /*Quote*/
 .Quote {
+  margin-top: 125px;
   padding: 70px 0;
+  background-color:#f8f8f8;
+}
+
+.Quote--whitebg {
+  background-color:#fff;
 }
 
 .Quote-container {
